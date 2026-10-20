@@ -8,7 +8,7 @@
     {
       "@id": "https://repolex.ai/r/klen/square-wars/commit/8c4dd7a1a6863a8f4c8203de6a7faadfb70f37eb",
       "git:hexsha": "8c4dd7a1a6863a8f4c8203de6a7faadfb70f37eb",
-      "repolex:parseStatus": "metadata_complete"
+      "repolex:parseStatus": "ast_complete"
     }
   ]
 }
