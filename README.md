@@ -1,1 +1,125 @@
-Initializing
+# Repolex Knowledge Graph of klen/square-wars
+
+RDF knowledge graph data for [klen/square-wars](https://github.com/klen/square-wars), parsed by [repolex](https://repolex.ai).
+
+> **Note**: This data is experimental and subject to change without notice.
+
+## How to use this data
+
+The easiest way to get started is to install the [rlex](https://github.com/repolex-ai/rlex) query tool:
+
+```bash
+cargo install --git https://github.com/repolex-ai/rlex
+```
+
+Verify the install:
+
+```bash
+rlex --help
+```
+
+**rlex is designed to be used primarily by LLMs in a terminal.** Start up your favorite AI assistant and ask it to use rlex. It handles the SPARQL — you just ask questions in plain English.
+
+To load this repo's data:
+
+```bash
+rlex download klen/square-wars
+```
+
+Consult `rlex --help` for other options, including SPARQL queries, HTTP server, and interactive visualization.
+
+## Data structure
+
+All data is stored as gzip-compressed [N-Quads](https://www.w3.org/TR/n-quads/) (`.nq.gz`), a standard RDF format that can be loaded into any triplestore or graph database.
+
+```
+.
+├── aggregate
+│   ├── ast
+│   │   └── 8c4dd7a1a6863a8f4c8203de6a7faadfb70f37eb
+│   │       └── chunk-001.nq.gz
+│   └── repolex
+│       └── 8c4dd7a1a6863a8f4c8203de6a7faadfb70f37eb
+│           └── chunk-001.nq.gz
+├── blob
+│   ├── 037435bde623043c6a7ce246eeb18600ed47afd7.nq.gz
+│   ├── 043492e48ec920adc98f4844be214ff2ae802a2b.nq.gz
+│   ├── 0cea6e5bddce0256940ef30e7f965dff95729371.nq.gz
+│   ├── 0e43554ac7abd8b7500e5674d2f8c8423d9e901d.nq.gz
+│   ├── 1769c858a6acd3031ceee1b34137b277a5b2eac4.nq.gz
+│   ├── 187932f69419a2eb73e04efe2786006462b1c46e.nq.gz
+│   ├── 1f39d652eaaf5012a7efda54e8af65380f4f494a.nq.gz
+│   ├── 24b7f51c399ca1e59d9b085eb68cb55cb9ecd71f.nq.gz
+│   ├── 27da1800110d3d669ecca525a89478902919bfbf.nq.gz
+│   ├── 324a7e8588b56590040d670db636580146c724d2.nq.gz
+│   ├── 32e2e6cb158a9aa61bda0a549f18e92469a1b60e.nq.gz
+│   ├── 3d659b847f7a9b3a511a6fb56573cf49c57fc437.nq.gz
+│   ├── 3dc0edd7f3fdac53390cd46d4127d9e44f87992c.nq.gz
+│   ├── 3eabd056ceba2c6fe59d767507cec7b7f3e8c490.nq.gz
+│   ├── 3fd98d8adc79fda7d0f0b74d4f26bbc04eee8466.nq.gz
+│   ├── 41cc51d1fcdb72c1e42460a2a6f60e0c3c776293.nq.gz
+│   ├── 42d5996f972626fbd7a9624b601c58f1f5cdad64.nq.gz
+│   ├── 53d48b692b03c623255ce724869ec8451204c3b9.nq.gz
+│   ├── 5472b12148a6d800001cd3898165199fea8e9346.nq.gz
+│   ├── 5669f1e9d04f12e532a129b7f1b1ec7541fc031a.nq.gz
+│   ├── 56b882833210fb5ee1bd5237a500fa2739da61b4.nq.gz
+│   ├── 59fa048e595cfb950391ad43ea4cd7aaefdb7367.nq.gz
+│   ├── 5cfe8eb237e4b7e1ad0227826ba4660ee7a801f0.nq.gz
+│   ├── 5d9ed4a0f003d8b17fb03c6ae20258cf0100406f.nq.gz
+│   ├── 5f456da3ac3398ff6e34f7dd9d118db59b8ba12c.nq.gz
+│   ├── 65241b8be779493060cce040ab952a14b0d7bb29.nq.gz
+│   ├── 67bd2462c0535da49349c0a915775465327bc6d9.nq.gz
+│   ├── 7ceb2dd6f9d8951f35252cb7d72eadf7e9a435ab.nq.gz
+│   ├── 7d7f2257dad3f154dec92109a62f5e5882c90a95.nq.gz
+│   ├── 8bf071ff643541e483ae5d8b1aacf93e0cd139e5.nq.gz
+│   ├── 924288ae9270d9bcabc705cf35bfa4c3393f9729.nq.gz
+│   ├── 93f16ab880fad09ad946cac01a8fc09f68f518a2.nq.gz
+│   ├── 97d336c777305ae69dec0e5fc99b339e156c82e8.nq.gz
+│   ├── 9aba3812a7b4f7aab5bec9b528773a1bd170ff3c.nq.gz
+│   ├── 9e2ced7464fbbaceedb25c90dc321fac94b4a3d5.nq.gz
+│   ├── 9ea5cc5e4daf9677ad80b7b25f19be5c2b13a906.nq.gz
+│   ├── a624f63b22e07214e7e030e093eb6dcdb144d09e.nq.gz
+│   ├── a6d7d076a8c9d5ac270ce3b4019e2ff139563cb8.nq.gz
+│   ├── a8771ed7b298c95b95b30bbce71121570e2a8737.nq.gz
+│   ├── af1230bbca6c3307bc3d567ae0a27b0c229cb1f4.nq.gz
+│   ├── b1e0d353a943b255bc3f5cb34c610a4c1d98ccea.nq.gz
+│   ├── ba60db7b0aa4e86548b75139b5f2ce60488e807a.nq.gz
+│   ├── bbcaa66acd05d9a1265e16b1a7f7155b48a0085d.nq.gz
+│   ├── c4349fec6583353092232641657fbb860cea2e56.nq.gz
+│   ├── c483a1766a3f0ec4e108e42def1323577cb286cb.nq.gz
+│   ├── ca1cb1037a47f839090a1da5cddc8cd8445173de.nq.gz
+│   ├── e0a557e29e4696d1bc37ef902a0b7d2de24ff3f4.nq.gz
+│   ├── ebdf68c85c267e7435e9b1e2d322629e4ed805b7.nq.gz
+│   ├── ebe4a96e2501ba11b92012330c4aafdc1162fa34.nq.gz
+│   └── f35a65358dccab0ce3f0b649a31e4eb33c289a97.nq.gz
+├── branch
+│   └── branch.nq.gz
+├── commit
+│   └── commit.nq.gz
+├── filetree
+│   └── 8c4dd7a1a6863a8f4c8203de6a7faadfb70f37eb.nq.gz
+└── tag
+    └── tag.nq.gz
+
+11 directories, 56 files
+```
+
+| Directory | What it contains |
+|-----------|-----------------|
+| `blob/` | Per-file AST graphs, content-addressed by git blob SHA. Each file in the source repo gets its own graph. |
+| `aggregate/ast/` | Combined AST graph per parsed commit. Merges all blob graphs for a snapshot of the entire codebase at that point. |
+| `aggregate/lsp/` | Language Server Protocol enrichment: resolved symbols, definitions, references, and type information. |
+| `aggregate/dataflow/` | Interprocedural data flow edges between functions and modules. |
+| `aggregate/repolex/` | Combined graph (AST + LSP + dataflow) per commit. |
+| `commit/` | Git commit metadata (author, date, message, parent links). |
+| `branch/` | Branch metadata. |
+| `tag/` | Tag metadata. |
+| `filetree/` | File tree snapshots per commit (which files existed and their blob SHAs). |
+| `audit/` | Code architecture and graph audit reports per commit. |
+
+## Source repository
+
+[klen/square-wars](https://github.com/klen/square-wars)
+
+---
+*Parsed on 2026-10-20 by [repolex](https://repolex.ai)*
